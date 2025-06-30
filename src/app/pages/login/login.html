@@ -1,1 +1,82 @@
-<p>login works!</p>
+<div class="parent">
+<div class="bg-animation">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<!-- Login container -->
+<div class="login-container">
+    <div class="login-card">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <h2 class="welcome-text">Welcome Back</h2>
+            <p class="welcome-subtitle">Please sign in to your account</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <input type="email" [(ngModel)]="loginObj.username" name="username" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <input type="password" [(ngModel)]="loginObj.password" name="password" class="form-control" id="password" placeholder="Enter your password"
+                        required>
+                    <span class="input-group-text password-toggle" style="cursor: pointer;">
+                        <i class="fa fa-eye" id="togglePassword"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">
+                    Remember me
+                </label>
+            </div>
+
+            <button type="button" (click)="onLogin()" class="btn btn-login">
+                <i class="fa fa-sign-in"></i> Sign In
+            </button>
+        </form>
+
+        <div class="forgot-password">
+            <a href="#" id="forgotPassword">Forgot your password?</a>
+        </div>
+
+        <div class="social-login">
+            <div class="social-divider">
+                <span>or continue with</span>
+            </div>
+            <div class="social-buttons">
+                <a href="#" class="btn-social" id="googleLogin">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="#" class="btn-social" id="facebookLogin">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn-social" id="twitterLogin">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="signup-link">
+            Don't have an account? <a href="#" id="signupLink">Sign up here</a>
+        </div>
+    </div>
+</div>
+</div>
