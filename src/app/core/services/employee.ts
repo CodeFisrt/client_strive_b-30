@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { Constant } from '../constants/Constant';
 
 @Injectable({
   providedIn: 'root'
 })
-export class User {
+export class Employee {
 
   constructor(private http: HttpClient) { }
 
-  onLogin(obj:any) {
-     debugger;
-    return this.http.post(environment.API_URL + "Login", obj)
+  
+  getAllEmployees() {
+    return this.http.get(environment.API_URL+ Constant.API_METHODS.EMPLOYEE.GET_ALL);
   }
 }

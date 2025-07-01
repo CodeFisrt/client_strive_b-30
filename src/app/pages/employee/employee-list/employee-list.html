@@ -1,1 +1,71 @@
-<p>employee-list works!</p>
+<div class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1><i class="fa fa-users"></i> Employee Management</h1>
+                    <p>Manage your team members and their information efficiently</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Total Employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Employee Cards in Rows -->
+    <div class="row">
+        <!-- Employee 1 -->
+        @for (item of employeeList; track $index) {
+        <div class="col-md-6 col-lg-4">
+            <div class="employee-card">
+                <div class="employee-avatar">JS</div>
+                <div class="employee-name">{{item.empName}}</div>
+                <div class="employee-designation">{{item.empDesignation}}</div>
+
+                <div class="employee-details"> 
+                    <div class="detail-item">
+                        <i class="fa fa-code detail-icon"></i>
+                        <span class="detail-label">Code:</span>
+                        <span class="detail-value">{{item.empCode}}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa fa-envelope detail-icon"></i>
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">{{item.empEmailId}}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa fa-star detail-icon"></i>
+                        <span class="detail-label">Role:</span>
+                        <span class="detail-value">
+                            <span class="role-badge role-senior">{{item.role}}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="employee-actions">
+                    <a href="#" class="btn-action btn-edit">
+                        <i class="fa fa-edit"></i>
+                        Edit
+                    </a>
+                    <a href="#" class="btn-action btn-delete">
+                        <i class="fa fa-trash"></i>
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        }
+
+
+    </div>
+</div>
