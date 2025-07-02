@@ -11,7 +11,12 @@ export const Constant = {
             ADD_UPDATE:'addUpdateClinet'
         },
         EMPLOYEE: {
-            GET_ALL:'GetAllEmployee'
+            GET_ALL:'GetAllEmployee',
+            NEW_EMPLOYEE:'CreateNewEmployee'
+        },
+        MASTER:{
+            GET_ALL_ROLES:'GetAllRoles',
+            GET_ALL_DESIGNATION:'GetAllDesignation'
         }
     },
     VALIDATION_MESSAGE: {
