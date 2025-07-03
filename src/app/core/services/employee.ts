@@ -15,7 +15,11 @@ export class Employee {
 
   
   getAllEmployees():Observable<ApiResponseModel> {
-    return this.http.get<ApiResponseModel>(environment.API_URL+ Constant.API_METHODS.EMPLOYEE.GET_ALL);
+    return this.http.get<ApiResponseModel>(environment.API_URL + Constant.API_METHODS.EMPLOYEE.GET_ALL);
+  }
+
+  getEmployeeById(id: number):Observable<ApiResponseModel> {
+    return this.http.get<ApiResponseModel>(`${environment.API_URL}${Constant.API_METHODS.EMPLOYEE.GET_EMPLOYEE_BY_ID}${id}`);
   }
 
   createNewEmployee(obj: EmployeeModel) :Observable<ApiResponseModel>{

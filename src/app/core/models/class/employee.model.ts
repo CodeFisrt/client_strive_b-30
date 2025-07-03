@@ -20,8 +20,11 @@ export class EmployeeModel  {
   empPerPinCode: string;
   empPerAddress: string;
   password: string;
-
+  erpEmployeeSkills:any;
+  ermEmpExperiences: any;
   constructor() {
+    this.ermEmpExperiences = [];
+    this.erpEmployeeSkills = [];
     this.roleId=0;
     this.userName="";
     this.empCode="";

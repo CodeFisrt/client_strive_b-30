@@ -105,16 +105,16 @@
                     <div class="col-md-6 mb-3">
                         <label for="empDesignationId" class="form-label">Designation <span
                                 class="required">*</span></label>
-                        <div *ngIf="designationList$ | async as designationData">
-
+                      
+                            --{{designationList$ | async|json}}
                             <select class="form-select" id="empDesignationId" [(ngModel)]="employeeObj.empDesignationId"
                                 name="empDesignationId" required>
                                 <option value="">Select Role</option>
-                                @for (item of designationData.data; track $index) {
+                                @for (item of designationList$ | async; track $index) {
                                 <option [value]="item.designationId">{{item.designation}}</option>
                                 }
                             </select>
-                        </div>
+                         
 
                     </div>
                 </div>
@@ -321,9 +321,17 @@
                         <button type="button" class="btn btn-secondary me-2">
                             <i class="fa fa-times"></i> Cancel
                         </button>
-                        <button type="button" (click)="onSave()" class="btn btn-primary">
+                        @if (currentEmpId == 0) {
+                            <button type="button" (click)="onSave()" class="btn btn-primary">
                             <i class="fa fa-save"></i> Create Employee
-                        </button>
+                            </button>
+                        } @else { 
+                            <button type="button" (click)="onSave()" class="btn btn-warning">
+                            <i class="fa fa-save"></i> Update Employee
+                            </button>
+                        }
+                       
+                      
                     </div>
                 </div>
             </div>

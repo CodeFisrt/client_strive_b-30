@@ -12,7 +12,8 @@ export const Constant = {
         },
         EMPLOYEE: {
             GET_ALL:'GetAllEmployee',
-            NEW_EMPLOYEE:'CreateNewEmployee'
+            NEW_EMPLOYEE:'CreateNewEmployee',
+            GET_EMPLOYEE_BY_ID:'GetEmployeeByEmployeeId?id='
         },
         MASTER:{
             GET_ALL_ROLES:'GetAllRoles',

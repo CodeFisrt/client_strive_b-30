@@ -11,7 +11,7 @@
                         <div class="stat-item">
                             <span class="stat-number">6</span>
                             <span class="stat-label">Total Employees</span>
-                            <button class="btn btn-success" routerLink="/employee-form">Add New</button>
+                            <button class="btn btn-success" routerLink="/employee-form/0">Add New</button>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
         @for (item of employeeList; track $index) {
         <div class="col-md-6 col-lg-4">
             <div class="employee-card">
-                <div class="employee-avatar">JS</div>
+                <div class="employee-avatar">{{item.empName| shortName}}</div>
                 <div class="employee-name">{{item.empName}}</div>
                 <div class="employee-designation">{{item.empDesignation}}</div>
 
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="employee-actions">
-                    <a href="#" class="btn-action btn-edit">
+                    <a  [routerLink]="'/employee-form/'+item.empId" class="btn-action btn-edit">
                         <i class="fa fa-edit"></i>
                         Edit
                     </a>
