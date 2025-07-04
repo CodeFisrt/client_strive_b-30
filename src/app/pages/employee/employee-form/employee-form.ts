@@ -30,15 +30,16 @@ export class EmployeeForm implements OnInit, OnDestroy {
   currentEmpId: number = 0;
 
   constructor() {
+    
+  }
+
+
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe((res: any) => {
       debugger;
       this.currentEmpId = res.id;
       this.getEMployeeById();
     })
-  }
-
-
-  ngOnInit(): void {
     this.roleList$ = this.masterService.getRoles();
     this.designationList$ = this.masterService.getDesignations();
     //this.getAllRoles();

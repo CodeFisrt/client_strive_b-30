@@ -22,6 +22,11 @@
 
 <!-- Main Content -->
 <div class="container">
+    <input type="text" class="" [placeholder]="" minlength="">
+        <app-alert className="alert-success" alertTitle="Success" [alertMessage]="'Welcome to Employee Portal'"></app-alert>
+        <app-progress-bar [progressValue]="30"></app-progress-bar>\
+
+        <app-tabs [tabList]="['Basic Info','Family Data','Contact Details']"></app-tabs>
     <!-- Employee Cards in Rows -->
     <div class="row">
         <!-- Employee 1 -->
