@@ -1,0 +1,10 @@
+
+@if (btnType == 'primary') {
+<button class="btn btn-success" (click)="btnClick()" >{{btnText}}</button>
+} @else if (btnType == 'secondary') {
+<button class="btn btn-secondary" (click)="btnClick()" >{{btnText}}</button>
+} @else if (btnType == 'danger') {
+<button class="btn btn-danger" (click)="btnClick()" >{{btnText}}</button>
+} @else {
+    <button class="btn " (click)="btnClick()" >{{btnText}}</button>
+}

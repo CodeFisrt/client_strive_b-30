@@ -11,6 +11,8 @@
                         <div class="stat-item">
                             <span class="stat-number">4</span>
                             <span class="stat-label">Total Clients</span>
+                            <app-my-button [btnText]="'Add Client'" (onBtnClicked)="opneModal()" [btnType]="'secondary'"></app-my-button>
+
                             <button class="btn btn-success" (click)="opneModal()">Add</button>
                         </div>
                     </div>

@@ -3,10 +3,11 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { Alert } from '../../../shared/reusableComponents/alert/alert';
 import { ProgressBar } from "../../../shared/reusableComponents/progress-bar/progress-bar";
 import { Tabs } from "../../../shared/reusableComponents/tabs/tabs";
+import { MyButton } from "../../../shared/reusableComponents/my-button/my-button";
 
 @Component({
   selector: 'app-client-list',
-  imports: [ReactiveFormsModule, Alert, ProgressBar, Tabs],
+  imports: [ReactiveFormsModule, Alert, ProgressBar, Tabs, MyButton],
   templateUrl: './client-list.html',
   styleUrl: './client-list.css'
 })

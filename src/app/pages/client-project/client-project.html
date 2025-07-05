@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <app-tabs [tabList]="tabsArray" (onTabChange)="tabChanges($event)"> </app-tabs>
+    </div>
+</div>
+
+<div class="row">
+    @if (currentTab == "Project Basic") {
+        <p> project data</p>
+    } @else if (currentTab == 'Employees') {
+        <h3>EMploee data</h3>
+    } @else if (currentTab == 'Meeting') {
+        <p>Emmeting details</p>
+    }  @else {
+         <p>Chnage LKog</p>
+    }
+</div>
