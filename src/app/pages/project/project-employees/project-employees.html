@@ -1,0 +1,216 @@
+<div class="row">
+    <!-- Employee Assignment List Section (col-7) -->
+    <div class="col-lg-7">
+        <div class="main-card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa fa-users"></i>
+                    Project Assignments
+                </h3>
+                <p class="card-subtitle">Manage employee project assignments</p>
+            </div>
+            <div class="card-body">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fa fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search assignments...">
+                </div>
+
+                <!-- Employee Assignment Items -->
+                <div class="employee-item">
+                    <div class="employee-header">
+                        <div>
+                            <div class="employee-name">John Smith - E-Commerce Platform</div>
+                        </div>
+                    </div>
+
+                    <div class="employee-details">
+                        <div class="detail-row">
+                            <i class="fa fa-id-badge detail-icon"></i>
+                            <span class="detail-label">Employee ID:</span>
+                            <span class="detail-value">1185</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-folder detail-icon"></i>
+                            <span class="detail-label">Project ID:</span>
+                            <span class="detail-value">2001</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-calendar detail-icon"></i>
+                            <span class="detail-label">Added Date:</span>
+                            <span class="detail-value">2025-01-15</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-star detail-icon"></i>
+                            <span class="detail-label">Role:</span>
+                            <span class="detail-value">Project Lead</span>
+                        </div>
+                    </div>
+
+                    <div class="employee-actions">
+                        <a href="#" class="btn-action btn-edit">
+                            <i class="fa fa-edit"></i>
+                            Edit
+                        </a>
+                        <a href="#" class="btn-action btn-delete">
+                            <i class="fa fa-trash"></i>
+                            Remove
+                        </a>
+                    </div>
+                </div>
+
+                <div class="employee-item">
+                    <div class="employee-header">
+                        <div>
+                            <div class="employee-name">Sarah Johnson - E-Commerce Platform</div>
+                        </div>
+                    </div>
+
+                    <div class="employee-details">
+                        <div class="detail-row">
+                            <i class="fa fa-id-badge detail-icon"></i>
+                            <span class="detail-label">Employee ID:</span>
+                            <span class="detail-value">1186</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-folder detail-icon"></i>
+                            <span class="detail-label">Project ID:</span>
+                            <span class="detail-value">2001</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-calendar detail-icon"></i>
+                            <span class="detail-label">Added Date:</span>
+                            <span class="detail-value">2025-01-16</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-star detail-icon"></i>
+                            <span class="detail-label">Role:</span>
+                            <span class="detail-value">Frontend Developer</span>
+                        </div>
+                    </div>
+
+                    <div class="employee-actions">
+                        <a href="#" class="btn-action btn-edit">
+                            <i class="fa fa-edit"></i>
+                            Edit
+                        </a>
+                        <a href="#" class="btn-action btn-delete">
+                            <i class="fa fa-trash"></i>
+                            Remove
+                        </a>
+                    </div>
+                </div>
+
+                <div class="employee-item">
+                    <div class="employee-header">
+                        <div>
+                            <div class="employee-name">Michael Brown - Mobile Banking App</div>
+                        </div>
+                    </div>
+
+                    <div class="employee-details">
+                        <div class="detail-row">
+                            <i class="fa fa-id-badge detail-icon"></i>
+                            <span class="detail-label">Employee ID:</span>
+                            <span class="detail-value">1187</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-folder detail-icon"></i>
+                            <span class="detail-label">Project ID:</span>
+                            <span class="detail-value">2002</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-calendar detail-icon"></i>
+                            <span class="detail-label">Added Date:</span>
+                            <span class="detail-value">2024-09-01</span>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fa fa-star detail-icon"></i>
+                            <span class="detail-label">Role:</span>
+                            <span class="detail-value">Project Lead</span>
+                        </div>
+                    </div>
+
+                    <div class="employee-actions">
+                        <a href="#" class="btn-action btn-edit">
+                            <i class="fa fa-edit"></i>
+                            Edit
+                        </a>
+                        <a href="#" class="btn-action btn-delete">
+                            <i class="fa fa-trash"></i>
+                            Remove
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee Assignment Form Section (col-5) -->
+    <div class="col-lg-5">
+        <div class="main-card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fa fa-user-plus"></i>
+                    Assign Employee
+                </h3>
+                <p class="card-subtitle">Assign employee to project</p>
+            </div>
+            <div class="card-body">
+                <form id="employeeAssignmentForm" method="POST" action="#">
+
+                    <!-- Assignment Information Section -->
+                    <div class="form-section">
+                        <h4 class="section-title">
+                            <i class="fa fa-link"></i>
+                            Assignment Details
+                        </h4>
+
+                        <div class="mb-3">
+                            <label for="employeeId" class="form-label">Employee <span class="required">*</span></label>
+                            <select class="form-select" id="employeeId" name="employeeId" required>
+                                <option value="">Select Employee</option>
+                                <option value="1185">John Smith (ID: 1185) - UI/UX Developer</option>
+                                <option value="1186">Sarah Johnson (ID: 1186) - Frontend Developer</option>
+                                <option value="1187">Michael Brown (ID: 1187) - Backend Developer</option>
+                                <option value="1188">Emily Davis (ID: 1188) - Full Stack Developer</option>
+                                <option value="1189">David Wilson (ID: 1189) - UI/UX Developer</option>
+                                <option value="1190">Lisa Anderson (ID: 1190) - Frontend Developer</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="projectId" class="form-label">Project <span class="required">*</span></label>
+                            <select class="form-select" id="projectId" name="projectId" required>
+                                <option value="">Select Project</option>
+                                <option value="2001">E-Commerce Platform</option>
+                                <option value="2002">Mobile Banking App</option>
+                                <option value="2003">CRM Dashboard</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="addedDate" class="form-label">Assignment Date <span
+                                    class="required">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                <input type="date" class="form-control" id="addedDate" name="addedDate" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-plus"></i> Assign Employee
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <i class="fa fa-times"></i> Clear Form
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

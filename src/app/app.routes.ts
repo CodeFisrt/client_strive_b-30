@@ -6,6 +6,7 @@ import { EmployeeForm } from './pages/employee/employee-form/employee-form';
 import { EmployeeList } from './pages/employee/employee-list/employee-list';
 import { authGuard } from './core/guards/auth-guard';
 import { ClientProject } from './pages/client-project/client-project';
+import { ProjectDetail } from './pages/project-detail/project-detail';
 
 export const routes: Routes = [
     {
@@ -20,7 +21,7 @@ export const routes: Routes = [
     {
         path:'',
         component: Layout,
-        canActivate:[authGuard],
+        //canActivate:[authGuard],
         children: [
             
             {
@@ -39,6 +40,10 @@ export const routes: Routes = [
             {
                 path:'project',
                 component: ClientProject
+            },
+            {
+                path:'projectdetail/:projectid',
+                component: ProjectDetail
             }
         ]
     }

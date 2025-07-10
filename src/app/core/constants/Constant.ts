@@ -18,6 +18,9 @@ export const Constant = {
         MASTER:{
             GET_ALL_ROLES:'GetAllRoles',
             GET_ALL_DESIGNATION:'GetAllDesignation'
+        },
+        PROJECT:{
+            GET_ALL_PROJECT:'GetAllClientProjects'
         }
     },
     VALIDATION_MESSAGE: {

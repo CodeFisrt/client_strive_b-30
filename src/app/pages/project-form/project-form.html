@@ -1,0 +1,160 @@
+ 
+<div class="container">
+    <div class="form-container">
+        <form id="projectForm" >
+
+            <!-- Basic Information Section -->
+            <div class="form-section">
+                <h4 class="section-title">
+                    <i class="fa fa-info-circle"></i>
+                    Project Information
+                </h4>
+
+                <div class="mb-3">
+                    <label for="projectName" class="form-label">Project Name <span class="required">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-folder"></i></span>
+                        <input type="text" class="form-control" id="projectName" name="projectName"
+                            placeholder="Enter project name" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="startDate" class="form-label">Start Date <span class="required">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            <input type="date" class="form-control" id="startDate" name="startDate" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="expectedEndDate" class="form-label">Expected End Date <span
+                                class="required">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-calendar-check-o"></i></span>
+                            <input type="date" class="form-control" id="expectedEndDate" name="expectedEndDate"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="leadByEmpId" class="form-label">Project Lead <span class="required">*</span></label>
+                        <select class="form-select" id="leadByEmpId" name="leadByEmpId" required>
+                            <option value="">Select Project Lead</option>
+                            <option value="1185">John Smith (ID: 1185)</option>
+                            <option value="1186">Sarah Johnson (ID: 1186)</option>
+                            <option value="1187">Michael Brown (ID: 1187)</option>
+                            <option value="1188">Emily Davis (ID: 1188)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="clientId" class="form-label">Client <span class="required">*</span></label>
+                        <select class="form-select" id="clientId" name="clientId" required>
+                            <option value="">Select Client</option>
+                            <option value="1001">TechCorp Solutions</option>
+                            <option value="1002">Digital Innovations Ltd</option>
+                            <option value="1003">Global Systems Inc</option>
+                            <option value="1004">StartUp Ventures</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="totalEmpWorking" class="form-label">Team Size</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-users"></i></span>
+                            <input type="number" class="form-control" id="totalEmpWorking" name="totalEmpWorking"
+                                placeholder="0" min="0">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="projectCost" class="form-label">Project Cost</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-dollar"></i></span>
+                            <input type="number" class="form-control" id="projectCost" name="projectCost"
+                                placeholder="0.00" min="0" step="0.01">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="form-section">
+                <h4 class="section-title">
+                    <i class="fa fa-user"></i>
+                    Contact Information
+                </h4>
+
+                <div class="mb-3">
+                    <label for="contactPerson" class="form-label">Contact Person <span class="required">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" id="contactPerson" name="contactPerson"
+                            placeholder="Enter contact person name" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="contactPersonContactNo" class="form-label">Contact Number <span
+                                class="required">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            <input type="tel" class="form-control" id="contactPersonContactNo"
+                                name="contactPersonContactNo" placeholder="+1 (555) 123-4567" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="contactPersonEmailId" class="form-label">Email Address <span
+                                class="required">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="contactPersonEmailId"
+                                name="contactPersonEmailId" placeholder="contact@company.com" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Details Section -->
+            <div class="form-section">
+                <h4 class="section-title">
+                    <i class="fa fa-file-text"></i>
+                    Project Details
+                </h4>
+
+                <div class="mb-3">
+                    <label for="projectDetails" class="form-label">Project Description</label>
+                    <textarea class="form-control" id="projectDetails" name="projectDetails" rows="4"
+                        placeholder="Enter detailed project description..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="completedDate" class="form-label">Completion Date</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-calendar-check-o"></i></span>
+                        <input type="date" class="form-control" id="completedDate" name="completedDate">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-save"></i> Save Project
+                </button>
+                <button type="button" class="btn btn-secondary">
+                    <i class="fa fa-times"></i> Clear Form
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

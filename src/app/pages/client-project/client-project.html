@@ -1,4 +1,45 @@
-<div class="row">
+<div class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1><i class="fa fa-building"></i> Project Management</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Client</th>
+                <th>leading Employee</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of projectList; track $index) {
+                <tr>
+                    <td>{{item.projectName}}</td>
+                    <td>{{item.startDate | date:'dd-MM-yyyy'}}</td>
+                    <td>{{item.expectedEndDate | date:'dd-MM-yyyy'}}</td>
+                   <td>{{item.clientName}}</td>
+                   <td>{{item.empName}}</td>
+                   <td>
+                    <button class="btn btn-success" [routerLink]="'/projectdetail/'+item.clientProjectId">Open</button>
+                   </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>
+
+<!-- <div class="row">
     <div class="col-12 text-center">
         <app-tabs [tabList]="tabsArray" (onTabChange)="tabChanges($event)"> </app-tabs>
     </div>
@@ -14,4 +55,4 @@
     }  @else {
          <p>Chnage LKog</p>
     }
-</div>
+</div> -->
