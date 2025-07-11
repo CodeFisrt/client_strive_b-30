@@ -26,6 +26,7 @@ export class Login {
         const data =  response.data.data;
         const strData =  JSON.stringify(data);
         localStorage.setItem("clinetStriveUser",strData);
+        localStorage.setItem('clientToken',response.data.token)
         this.router.navigateByUrl('/client-list')
       },
       error:(error:any)=>{
