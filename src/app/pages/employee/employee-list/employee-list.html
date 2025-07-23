@@ -12,6 +12,10 @@
                             <span class="stat-number">6</span>
                             <span class="stat-label">Total Employees</span>
                             <button class="btn btn-success" routerLink="/employee-form/0">Add New</button>
+
+                            <app-dyanmic-button [className]="'btn btn-warning'">
+                                Add New Employee    
+                            </app-dyanmic-button>
                         </div>
                     </div>
                 </div>
@@ -22,14 +26,26 @@
 
 <!-- Main Content -->
 <div class="container">
-    <input type="text" class="" [placeholder]="" minlength="">
+    <!-- <input type="text" class="" [placeholder]="" minlength="">
         <app-alert className="alert-success" alertTitle="Success" [alertMessage]="'Welcome to Employee Portal'"></app-alert>
         <app-progress-bar [progressValue]="30"></app-progress-bar>\
 
-        <app-tabs [tabList]="['Basic Info','Family Data','Contact Details']"></app-tabs>
+        <app-tabs [tabList]="['Basic Info','Family Data','Contact Details']"></app-tabs> -->
     <!-- Employee Cards in Rows -->
     <div class="row">
-        <!-- Employee 1 -->
+        @if(isLoader() == true){
+        <div class="col-12">
+            <div class="spinner-grow text-muted"></div>
+            <div class="spinner-grow text-primary"></div>
+            <div class="spinner-grow text-success"></div>
+            <div class="spinner-grow text-info"></div>
+            <div class="spinner-grow text-warning"></div>
+            <div class="spinner-grow text-danger"></div>
+            <div class="spinner-grow text-secondary"></div>
+            <div class="spinner-grow text-dark"></div>
+            <div class="spinner-grow text-light"></div>
+        </div>
+        } @else {
         @for (item of employeeList; track $index) {
         <div class="col-md-6 col-lg-4">
             <div class="employee-card">
@@ -37,7 +53,7 @@
                 <div class="employee-name">{{item.empName}}</div>
                 <div class="employee-designation">{{item.empDesignation}}</div>
 
-                <div class="employee-details"> 
+                <div class="employee-details">
                     <div class="detail-item">
                         <i class="fa fa-code detail-icon"></i>
                         <span class="detail-label">Code:</span>
@@ -58,7 +74,7 @@
                 </div>
 
                 <div class="employee-actions">
-                    <a  [routerLink]="'/employee-form/'+item.empId" class="btn-action btn-edit">
+                    <a [routerLink]="'/employee-form/'+item.empId" class="btn-action btn-edit">
                         <i class="fa fa-edit"></i>
                         Edit
                     </a>
@@ -69,8 +85,9 @@
                 </div>
             </div>
         </div>
-
         }
+        }
+
 
 
     </div>

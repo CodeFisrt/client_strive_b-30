@@ -10,10 +10,14 @@
                     <div class="stats-container">
                         <div class="stat-item">
                             <span class="stat-number">4</span>
-                            <span class="stat-label">Total Clients</span>
-                            <app-my-button [btnText]="'Add Client'" (onBtnClicked)="opneModal()" [btnType]="'secondary'"></app-my-button>
+                            <span class="stat-label">Total Clients</span> 
+                            <!-- <button class="btn btn-success" (click)="opneModal()">Add</button> -->
 
-                            <button class="btn btn-success" (click)="opneModal()">Add</button>
+                            <app-my-button [btnText]="'Add'" [btnType]="'primary'"></app-my-button>
+
+                            <app-dyanmic-button [className]="'btn-danger'">
+                             <i class="fa fa-user"></i>   Add new Client
+                            </app-dyanmic-button>
                         </div>
                     </div>
                 </div>
@@ -24,10 +28,10 @@
 
 <!-- Main Content -->
 <div class="container">
-    <app-alert className="alert-danger" [alertTitle]="'Error'" [alertMessage]="'Client Page Loaded'"></app-alert>
+    <!-- <app-alert className="alert-danger" [alertTitle]="'Error'" [alertMessage]="'Client Page Loaded'"></app-alert>
     <app-progress-bar [progressValue]="90"></app-progress-bar>
     <br>
-    <app-tabs [tabList]="projectTabs"></app-tabs>
+    <app-tabs [tabList]="projectTabs"></app-tabs> -->
     <div class="row">
         
         <!-- Client List Section (col-7) -->
@@ -45,7 +49,7 @@
                     <div class="search-box">
                         <i class="fa fa-search search-icon"></i>
                         <input type="text" #searchText class="search-input" placeholder="Search clients...">
-                        <button class="btn  btn-success" (click)="onSearch()">Search</button>
+                        <!-- <button class="btn  btn-success" (click)="onSearch()">Search</button> -->
                     </div>
 
                     <!-- Client Items -->
